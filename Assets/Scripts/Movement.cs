@@ -8,33 +8,49 @@ public class Movement : MonoBehaviour
     float movement_speed = 10f;
     float time_to_move;
     bool in_movement = false;
-    bool on_the_edge = false;
     int direction;
     Vector3 destination;
     public Camera player_cam;
+    RaycastHit hit_info;
 
     
     // Start is called before the first frame update
     void Start()
     {
-        transform.position = new Vector3(0, 0.5f, 0);
+        Plane_sc skript_plane_sc = GameObject.FindObjectOfType(typeof(Plane_sc)) as Plane_sc;
+        transform.position = new Vector3(skript_plane_sc.scale_x * 5, 0.5f, 0);
+        
         player_cam.transform.position = transform.position;
     }
 
     bool hit(string dir){
-        RaycastHit hit_info;
+        
 
-        if(dir == "r")
-            return Physics.Raycast(transform.position, transform.right, out hit_info, 1f);
-        else if(dir == "l")
-            return Physics.Raycast(transform.position, -transform.right, out hit_info, 1f);
-        else
-            return false;
+        switch(dir){
+            case "r":
+                return Physics.Raycast(transform.position, transform.right, out hit_info, 1f);
+            case "l":
+                return Physics.Raycast(transform.position, -transform.right, out hit_info, 1f);
+            case "f":
+                return Physics.Raycast(transform.position, transform.forward, out hit_info, 1f);
+            
+        }
+            
+       
+        return false;
     }
     // Update is called once per frame
     void Update()
     {
-        Plane_sc skript_plane_sc = GameObject.FindObjectOfType(typeof(Plane_sc)) as Plane_sc;
+        if(hit("f")){
+            GameObject infront = hit_info.collider.gameObject;
+            infront.SetActive(false);
+            //todo new types of balls doing somthing;
+            Plane_sc skript_plane_sc = GameObject.FindObjectOfType(typeof(Plane_sc)) as Plane_sc;
+            skript_plane_sc.increase_score(-20f);
+           // Debug.Log("GameOver");
+        }
+
         while(true){
             if(in_movement){
                 time_to_move -= Time.deltaTime;
@@ -70,9 +86,6 @@ public class Movement : MonoBehaviour
                 else
                     Debug.Log("HitL");
             }
-        
-
-        
         break;
         }
        //Camera sync with player

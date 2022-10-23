@@ -17,12 +17,15 @@ public class ball_sc : MonoBehaviour
     void Update()
     {
         ball_rigidbody.AddForce(-transform.forward * force_added);
-        ball_rigidbody.transform.eulerAngles = new Vector3(0, ball_rigidbody.transform.eulerAngles.y, ball_rigidbody.transform.eulerAngles.z);
-        
-        if(transform.position.y < 0){
+
+        if(transform.position.z <= 0){
+            Plane_sc skript_plane_sc = GameObject.FindObjectOfType(typeof(Plane_sc)) as Plane_sc;
+            skript_plane_sc.increase_score(1f);
             Debug.Log("Deleting");
             gameObject.SetActive(false);
         }
+        
+        
             
     
     }
