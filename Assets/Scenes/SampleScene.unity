@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 151226385}
   - component: {fileID: 151226384}
   - component: {fileID: 151226383}
+  - component: {fileID: 151226387}
   m_Layer: 0
   m_Name: GamePlane
   m_TagString: Untagged
@@ -219,6 +220,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &151226387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 151226382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f7cf9f2e6acda042818c6f367b8f7c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ball_prefab: {fileID: 674119107222817823, guid: 2416be0ca34767740a414e48190ae554, type: 3}
+  border_prefab: {fileID: 473096866130926463, guid: e990b67dce27f404d9f4bab1c0da40c9, type: 3}
+  scale_x: 2
+  scale_z: 5
 --- !u!1 &274640576
 GameObject:
   m_ObjectHideFlags: 0
