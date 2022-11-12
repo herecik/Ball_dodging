@@ -25,8 +25,8 @@ Simple ball dodging game
     - extra dangerous balls
 - Add soundtcrack
 - Add sounds
-- Visible borders? 
-- Create dispensers for balls (canons maybe)
+- [x] Visible borders? 
+- [x] Create dispensers for balls (canons maybe)
 
 
 

@@ -21,12 +21,7 @@ public class ball_sc : MonoBehaviour
         if(transform.position.z <= 0){
             Plane_sc skript_plane_sc = GameObject.FindObjectOfType(typeof(Plane_sc)) as Plane_sc;
             skript_plane_sc.increase_score(1f);
-            Debug.Log("Deleting");
             gameObject.SetActive(false);
         }
-        
-        
-            
-    
     }
 }

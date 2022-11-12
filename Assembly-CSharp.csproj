@@ -38,7 +38,9 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Plane_sc.cs" />
      <Compile Include="Assets\Scripts\Movement.cs" />
+     <Compile Include="Assets\Scripts\Canvas_sc.cs" />
      <Compile Include="Assets\Scripts\ball_sc.cs" />
+     <Compile Include="Assets\Scripts\Canon_spawn_sc.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.3f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>

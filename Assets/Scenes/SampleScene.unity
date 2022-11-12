@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 151226384}
   - component: {fileID: 151226383}
   - component: {fileID: 151226387}
+  - component: {fileID: 151226388}
   m_Layer: 0
   m_Name: GamePlane
   m_TagString: Untagged
@@ -238,6 +239,19 @@ MonoBehaviour:
   scale_x: 2
   scale_z: 5
   spawn_rate: 250
+--- !u!114 &151226388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 151226382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4593a2a6d45f0d74c852a66998145902, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canon_prefab: {fileID: 8777427608681798105, guid: fa2eeac544aa4674cbe370784fb411c6, type: 3}
 --- !u!1 &215520155
 GameObject:
   m_ObjectHideFlags: 0
@@ -602,6 +616,7 @@ GameObject:
   - component: {fileID: 1129991032}
   - component: {fileID: 1129991031}
   - component: {fileID: 1129991030}
+  - component: {fileID: 1129991036}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -730,3 +745,15 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1129991036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1129991029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18eccf461ac316a4abe11b8ec13cc57d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
